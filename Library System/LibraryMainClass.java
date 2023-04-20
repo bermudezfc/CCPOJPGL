@@ -28,22 +28,35 @@ public class LibraryMainClass {
         books.add(book2);
         books.add(book3);
         
-        System.out.println("Electronic Book Rental System");
-        System.out.println("=============================");
+        // System.out.println("Electronic Book Rental System");
+        // System.out.println("=============================");
 
-        // For array lists, .size rather than .length
-        for (int x = 0; x < books.size(); x++) {
-            System.out.print(x);
-            // for array list, array.get(index).getterMethod
-            System.out.print(" " + books.get(x).getName() + ", " +  books.get(x).getAuthor());
-            System.out.println();
+        // // For array lists, .size rather than .length
+        // for (int x = 0; x < books.size(); x++) {
+        //     System.out.print(x);
+        //     // for array list, array.get(index).getterMethod
+        //     System.out.print(" " + books.get(x).getName() + ", " +  books.get(x).getAuthor());
+        //     System.out.println();
 
-        }
-        System.out.println("=============================");
+        // }
+        // System.out.println("=============================");
 
         boolean end = false;
         while (end == false) {
             try {
+                System.out.println("Electronic Book Rental System");
+                System.out.println("=============================");
+        
+                // For array lists, .size rather than .length
+                for (int x = 0; x < books.size(); x++) {
+                    System.out.print(x);
+                    // for array list, array.get(index).getterMethod
+                    System.out.print(" " + books.get(x).getName() + ", " +  books.get(x).getAuthor());
+                    System.out.println();
+        
+                }
+                System.out.println("=============================");
+        
                 Scanner scan = new Scanner(System.in);
 
                 System.out.print("Choose a number ");
@@ -73,7 +86,7 @@ public class LibraryMainClass {
                 }
 
             } catch (IndexOutOfBoundsException e) {
-                System.out.println("Invalid Choice");
+                System.out.println("Index does not exist");
             } catch (InputMismatchException e) {
                 System.out.println("Invalid Choice");
             }
